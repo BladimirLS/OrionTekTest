@@ -1,95 +1,94 @@
-Client Management Application
+# Client Management Application
 
 This project is a full-stack web application for managing clients. The backend is built with .NET Core and the frontend is developed using React and Bootstrap.
 
-Features
+## Features
 
-View a list of clients
+- View a list of clients
+- Create new clients
+- Update existing clients
+- Delete clients
 
-Create new clients
-
-Update existing clients
-
-Delete clients
-
-Backend
+## Backend
 
 The backend is developed with .NET Core, following Clean Architecture principles. It provides RESTful APIs for managing clients.
 
-Prerequisites
+### Prerequisites
 
-.NET SDK
+- [.NET SDK](https://dotnet.microsoft.com/download)
+- SQL Server (if not using in-memory database)
 
-SQL Server (if not using in-memory database)
+### Installation
 
-Installation
+1. Navigate to the backend folder:
+    ```bash
+    cd Backend
+    ```
 
-Navigate to the backend folder:
+2. Restore dependencies:
+    ```bash
+    dotnet restore
+    ```
 
-cd Backend
+3. Run the application:
+    ```bash
+    dotnet run
+    ```
 
-Restore dependencies:
+The API will be available at `http://localhost:5142`.
 
-dotnet restore
+### Endpoints
 
-Run the application:
+- `GET /api/clients` - Get all clients
+- `GET /api/clients/{id}` - Get a specific client by ID
+- `POST /api/clients` - Create a new client
+- `PUT /api/clients/{id}` - Update an existing client
+- `DELETE /api/clients/{id}` - Delete a client
 
-dotnet run
-
-The API will be available at http://localhost:5142.
-
-Endpoints
-
-GET /api/clients - Get all clients
-
-GET /api/clients/{id} - Get a specific client by ID
-
-POST /api/clients - Create a new client
-
-PUT /api/clients/{id} - Update an existing client
-
-DELETE /api/clients/{id} - Delete a client
-
-Frontend
+## Frontend
 
 The frontend is built with React and styled using Bootstrap.
 
-Prerequisites
+### Prerequisites
 
-Node.js and npm
+- [Node.js and npm](https://nodejs.org/en/)
 
-Installation
+### Installation
 
-Navigate to the frontend folder:
+1. Navigate to the frontend folder:
+    ```bash
+    cd Frontend
+    ```
 
-cd Frontend
+2. Install dependencies:
+    ```bash
+    npm install
+    ```
 
-Install dependencies:
+3. Start the development server:
+    ```bash
+    npm start
+    ```
 
-npm install
+The application will be available at `http://localhost:3000`.
 
-Start the development server:
+### Features
 
-npm start
+- **Client List**: View a table of all clients with options to edit or delete.
+- **Create Client**: A form to add a new client.
+- **Update Client**: A form to edit the details of an existing client.
 
-The application will be available at http://localhost:3000.
+## Deployment
 
-Features
+- Ensure both backend and frontend are running on their respective ports.
+- Update the frontend `axios` base URL to match the backend API's address if necessary.
 
-Client List: View a table of all clients with options to edit or delete.
+## Additional Notes
 
-Create Client: A form to add a new client.
+- This project uses FontAwesome for icons and Bootstrap for responsive design.
+- The backend uses Entity Framework Core with an in-memory database for testing purposes.
 
-Update Client: A form to edit the details of an existing client.
+## License
 
-Deployment
+This project is licensed under the MIT License. See the LICENSE file for more details.
 
-Ensure both backend and frontend are running on their respective ports.
-
-Update the frontend axios base URL to match the backend API's address if necessary.
-
-Additional Notes
-
-This project uses FontAwesome for icons and Bootstrap for responsive design.
-
-The backend uses Entity Framework Core with an in-memory database for testing purposes.
